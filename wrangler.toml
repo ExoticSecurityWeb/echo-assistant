@@ -14,7 +14,7 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "echo_assistant_db"
-database_id = "REMPLACE_MOI_APRES_wrangler_d1_create"
+database_id = "0953e9c2-9091-470d-8a49-d025413c6fed"
 
 # Vérifie toutes les minutes s'il y a des messages en attente depuis + de 5 min
 [triggers]
