@@ -1,0 +1,21 @@
+name = "echo-assistant"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Sert les fichiers statiques du dossier /public (chat + admin)
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Base D1 : à créer avec `wrangler d1 create echo_assistant_db`
+# puis colle le database_id retourné ci-dessous
+[[d1_databases]]
+binding = "DB"
+database_name = "echo_assistant_db"
+database_id = "REMPLACE_MOI_APRES_wrangler_d1_create"
+
+# Vérifie toutes les minutes s'il y a des messages en attente depuis + de 5 min
+[triggers]
+crons = ["* * * * *"]
