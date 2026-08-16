@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>ECHO</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="logo">
+        <span class="logo-ring"></span>
+        <span class="logo-text">ECHO</span>
+      </div>
+      <div class="subtitle">Assistant IA expérimental — bêta fermée</div>
+    </header>
+
+    <main id="chatArea" class="chat-area"></main>
+
+    <div id="typingIndicator" class="typing-indicator hidden">
+      <span></span><span></span><span></span>
+      <span class="typing-label">ECHO réfléchit…</span>
+    </div>
+
+    <footer class="composer">
+      <textarea id="messageInput" placeholder="Écris à ECHO…" rows="1"></textarea>
+      <button id="sendBtn" aria-label="Envoyer">➤</button>
+    </footer>
+  </div>
+
+  <div id="maintenanceScreen" class="maintenance-screen hidden">
+    <div class="maintenance-box">
+      <span class="logo-ring"></span>
+      <h1>ECHO</h1>
+      <p>🚧 Le service est actuellement indisponible.</p>
+      <p class="small">Merci de réessayer plus tard.</p>
+    </div>
+  </div>
+
+  <script src="/chat.js"></script>
+</body>
+</html>
