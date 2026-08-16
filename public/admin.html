@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ECHO — Admin</title>
+<link rel="stylesheet" href="/admin.css" />
+</head>
+<body>
+  <div id="loginScreen" class="login-screen">
+    <div class="login-box">
+      <h1>ECHO — Admin</h1>
+      <input id="passwordInput" type="password" placeholder="Mot de passe admin" />
+      <button id="loginBtn">Entrer</button>
+      <p id="loginError" class="error hidden">Mot de passe incorrect</p>
+    </div>
+  </div>
+
+  <div id="dashboard" class="dashboard hidden">
+    <header class="admin-header">
+      <h1>ECHO — Dashboard</h1>
+      <div class="maintenance-toggle">
+        <label>
+          <input type="checkbox" id="maintenanceSwitch" />
+          Mode maintenance (coupe le chat)
+        </label>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="pending-list">
+        <h2>En attente <span id="pendingCount">(0)</span></h2>
+        <div id="pendingItems"></div>
+      </aside>
+
+      <main class="thread-panel">
+        <div id="threadHeader" class="thread-header hidden">
+          Session : <code id="currentSessionLabel"></code>
+        </div>
+        <div id="threadMessages" class="thread-messages"></div>
+        <div id="replyBox" class="reply-box hidden">
+          <textarea id="replyInput" placeholder="Ta réponse en tant qu'ECHO…" rows="3"></textarea>
+          <button id="replySendBtn">Envoyer la réponse</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
